@@ -1,0 +1,35 @@
+<div class="p-3">
+  <div class="card">
+    <div class="card-header">
+      Products List
+    </div>
+    <div class="card-body">
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>
+            id
+          </th>
+          <th>
+            name
+          </th>
+          <th>
+            price
+          </th>
+          <th>
+            quantity
+          </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let p of products">
+          <td>{{p.id}}</td>
+          <td>{{p.name}}</td>
+          <td>{{p.price}}</td>
+          <td>{{p.quantity}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

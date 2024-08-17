@@ -3,6 +3,7 @@ package com.mehdox.invetoryservice.web;
 import com.mehdox.invetoryservice.Repository.ProductRepository;
 import com.mehdox.invetoryservice.entities.Product;
 import org.springframework.security.access.prepost.PostAuthorize;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,7 +16,7 @@ public class ProductController {
         this.productRepository = productRepository;
     }
     @GetMapping("/products")
-    @PostAuthorize("hasAuthority('Admin')")
+    //@PostAuthorize("hasAuthority('Admin')")
     public List<Product> getProducts(){
         return productRepository.findAll();
     }
